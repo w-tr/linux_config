@@ -1,0 +1,2 @@
+alias vi=nvim
+alias start=xdg-open
