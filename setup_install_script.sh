@@ -1,8 +1,20 @@
 sudo apt update && sudo apt upgrade -y
 ##### Get essentials
-sudo apt install neovim git curl wget vlc build-essential -y
+sudo apt install -y \
+	neovim \
+	git \
+	curl \
+	wget \
+	vlc \
+	build-essential \
+	meld \
+	gtkterm \
+	gtkhash \
+	gimp
+
 ##### Give permissions
 sudo usermod -aG lp,dialout $(whoami)
+
 ##### Install vscode as per code.visualstudio.com/doc...
 sudo apt-get install -y gpg software-properties-common apt-transport-https
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -12,3 +24,4 @@ rm -f packages.microsoft.gpg
 sudo apt update
 sudo apt install code
 
+##### Install WezTerm
