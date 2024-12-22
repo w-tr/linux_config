@@ -29,3 +29,10 @@ bindkey -M visual '^e' edit-command-line # Visual Mode
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
+# Overwrite for zsh autosuggest.
+bindkey '^y' autosuggest-accept
+
+# Make fzf accept like vim.
+# fzf --bind 'ctrl-y:accept'
+export FZF_DEFAULT_OPTS="--bind 'ctrl-y:accept'"
+

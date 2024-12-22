@@ -52,8 +52,13 @@ autoload -U compinit && compinit
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:*' fzf-bindings 'ctrl-y:accept'
+
 
 zinit cdreplay -q
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# eval "$(fzf --zsh)"
 
 ######
 # Run my tweaks ontop
@@ -64,10 +69,6 @@ fi
 if [ -f ~/.my_aliases ]; then
 . ~/.my_aliases
 fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# eval "$(fzf --zsh)"
-
 ######
 # History
 ######
