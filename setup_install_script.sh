@@ -13,7 +13,8 @@ sudo apt install -y \
 	gtkterm \
 	gtkhash \
 	gimp \
-	ripgrep
+	ripgrep \
+	bat
 
 ################################################################################
 ##### Give permissions

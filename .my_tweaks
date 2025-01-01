@@ -7,6 +7,7 @@ bindkey -M vicmd '^e' edit-command-line # Normal Mode
 bindkey -M viins '^e' edit-command-line # Insert Mode
 # bindkey -M viopp '^e' edit-command-line # Opperator pending
 bindkey -M visual '^e' edit-command-line # Visual Mode
+
 #################################################
 ###No longer needed because of omz::vi-mode plugin.
 #################################################
