@@ -12,19 +12,20 @@ config.font_size = 14
 -- keep adding config stuff below
 --
 config.leader = {
-  key = 'a',
-  mods = 'CTRL',
-  timeout_milliseconds = 2000,
+	key = "\\",
+	mods = "CTRL",
+	timeout_milliseconds = 2000,
 }
 config.keys = {
-  {
-    key = '[',
-    mods = 'LEADER',
-    action = wezterm.action.ActivateCopyMode,
-  }, {
-  key = 'f',
-  mods = 'ALT',
-  action = wezterm.action.TogglePaneZoomState,
-},
+	{
+		key = "[",
+		mods = "LEADER",
+		action = wezterm.action.ActivateCopyMode,
+	},
+	{
+		key = "f",
+		mods = "ALT",
+		action = wezterm.action.TogglePaneZoomState,
+	},
 }
 return config
