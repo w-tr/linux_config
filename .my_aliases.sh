@@ -5,4 +5,4 @@ alias start=xdg-open
 alias ls='ls --color'
 alias ll='ls -alF'
 alias l='ls -CF'
-alias more="batcat"
+alias more='batcat --pager="less -R -X"'

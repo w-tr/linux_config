@@ -4,7 +4,7 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Enable Powerlevel10k instant prompt.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 export XDG_DATA_HOME=$HOME/.local/share
 
@@ -16,8 +16,8 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # Download if not present
 if [ ! -d "$ZINIT_HOME" ]; then
-	mkdir -p "$(dirname $ZINIT_HOME)"
-	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+    mkdir -p "$(dirname $ZINIT_HOME)"
+    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
 source "${ZINIT_HOME}/zinit.zsh"
@@ -63,11 +63,18 @@ zinit cdreplay -q
 ######
 # Run my tweaks ontop
 ######
-if [ -f ~/.my_tweaks ]; then
-. ~/.my_tweaks
+if [ -f ~/.my_tweaks.sh ]; then
+    . ~/.my_tweaks.sh
 fi
-if [ -f ~/.my_aliases ]; then
-. ~/.my_aliases
+if [ -f ~/.my_aliases.sh ]; then
+    . ~/.my_aliases.sh
+fi
+if [ -f ~/.my_env_var.sh ]; then
+    . ~/.my_env_var.sh
+fi
+# Don't add file to git...because this will be public.
+if [ -f ~/.my_secret_stuff.sh ]; then
+    . ~/.my_secret_stuff.sh
 fi
 ######
 # History
